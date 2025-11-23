@@ -16,69 +16,90 @@
       <div class="flex flex-col gap-2">
         <label for="first-name" class="text-[16px]">
           First Name
+          <span class="text-[hsl(169,82%,27%)]">*</span>
         </label>
         <input id="first-name" type="text"
           class="border border-solid border-gray-500 rounded-md p-2 active:outline-green-600 hover:outline  hover:outline-green-600
           focus:outline focus:outline-green-600">
+        <p id="js-first-name-alert" class="text-[hsl(0,66%,54%)] text-[13px]"></p>
       </div>
       
       <div class="flex flex-col gap-2">
         <label for="last-name" class="text-[16px]">
           Last Name
+          <span class="text-[hsl(169,82%,27%)]">*</span>
         </label>
         <input id="last-name" type="text"
           class="border border-solid border-gray-500 rounded-md p-2 cursor-pointer active:outline-green-600 hover:outline  hover:outline-green-600
             focus:outline focus:outline-green-600">
+        <p id="js-last-name-alert" class="text-[hsl(0,66%,54%)] text-[13px]"></p>
       </div>
     </div>
     
-    <label for="email-address" class="text-[16px]">
-      Email Address
-    </label>
-    <input id="email-address" type="email"
-      class="border border-solid border-gray-500 rounded-md p-2 cursor-pointer active:outline-green-600 hover:outline  hover:outline-green-600
-          focus:outline focus:outline-green-600">
-
-    <fieldset>
+    <div class="flex flex-col gap-2">
+      <label for="email-address" class="text-[16px]">
+        Email Address
+        <span class="text-[hsl(169,82%,27%)]">*</span>
+      </label>
+      <input id="email-address" type="email"
+        class="border border-solid border-gray-500 rounded-md p-2 cursor-pointer active:outline-green-600 hover:outline  hover:outline-green-600
+            focus:outline focus:outline-green-600">
+      <p id="js-email-alert" class="text-[hsl(0,66%,54%)] text-[13px]"></p>
+    </div>
+     
+    <fieldset class="pt-2">
       <legend>
         Query Type
+        <span class="text-[hsl(169,82%,27%)]">*</span>
       </legend>
 
-      <div class="flex flex-col gap-2 md:flex-row md:gap-4">
-        <label for="" class="cursor-pointer">
-          <input type="radio" 
-            class="border border-solid border-gray-500 rounded-md text-[16px]">
-          General Enquiry
-        </label>
+      <div class="flex flex-col gap-2">
+        <div id="js-radio-container" class="flex flex-col gap-4 md:flex-row md:gap-4 p-2 rounded-md">
+          <label for="" class="cursor-pointer border border-gray-500 border-solid p-2 rounded-md w-full active:outline-green-600 hover:outline  hover:outline-green-600
+            focus:outline focus:outline-green-600">
+            <input type="radio" name="choice"
+              class="text-[16px]">
+            General Enquiry
+          </label>
 
-        <label class="cursor-pointer">
-          <input type="radio"
-            class="border border-solid border-gray-500 rounded-md text-[16px]">
-          Support Request
-        </label>
+          <label class="cursor-pointer border border-gray-500 border-solid p-2 rounded-md w-full active:outline-green-600 hover:outline  hover:outline-green-600
+            focus:outline focus:outline-green-600">
+            <input type="radio" name="choice"
+              class="text-[16px]">
+            Support Request
+          </label>
+        </div>
+        <p id="js-enquiry-alert" class="text-[hsl(0,66%,54%)] text-[13px]"></p>
       </div>
       
     </fieldset>
 
     <label for="message" class="text-[16px]">
       Message
+      <span class="text-[hsl(169,82%,27%)]">*</span>
     </label>
     <textarea name="" id="message"
       class="border border-solid border-gray-500 rounded-md p-2 h-32 resize-none cursor-pointer active:outline-green-600 hover:outline  hover:outline-green-600
           focus:outline focus:outline-green-600"></textarea>
+    <p id="js-message-alert" class="text-[hsl(0,66%,54%)] text-[13px]"></p>
 
-    <div class="flex gap-4">
-      <input type="checkbox" class="cursor-pointer">
-      <p class="cursor-pointer">
-        I consent to being contacted by the team
-      </p>
+    <div>
+      <div class="flex gap-4">
+        <input type="checkbox" class="cursor-pointer">
+        <p class="cursor-pointer">
+          I consent to being contacted by the team
+        </p>
+      </div>
+      <p id="js-consent-alert" class="text-[hsl(0,66%,54%)] text-[13px]"></p>
     </div>
 
-    <button type="submit"
+    <button id="submit-btn" type="submit"
       class="bg-[hsl(169,82%,27%)] text-white font-semibold p-2.5 rounded-md hover:bg-[hsl(169,82%,10%)]
         transition-all duration-150 ease-in-out cursor-pointer">
       Submit
     </button>
   </form>
+
+  <script src="script.js"></script>
 </body>
 </html>
