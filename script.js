@@ -1,3 +1,4 @@
+const contactForm = document.querySelector('#js-contact-form');
 const firstName = document.querySelector('#first-name');
 const firstNameAlert = document.querySelector('#js-first-name-alert');
 const lastName = document.querySelector('#last-name');
@@ -10,6 +11,7 @@ const message = document.querySelector('#message');
 const messageAlert = document.querySelector('#js-message-alert');
 const consentAlert = document.querySelector('#js-consent-alert');
 const submitBtn = document.querySelector('#submit-btn');
+const successMessage = document.querySelector('#js-success-message');
 
 function submitForm () {
     const checked = document.querySelector('input[name="choice"]:checked');
@@ -80,15 +82,14 @@ function submitForm () {
          && message.value.trim() !== '' 
          && checked 
          && consent) {
-            document.querySelectorAll('input[name="choice"]').forEach(radio => {
-                radio.checked = false;
-            });
+            successMessage.style.display = 'inline';
 
-            document.querySelector('input[type="checkbox"]').checked = false;
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 3000);
 
-            window.location.href = 'success.html';
+            contactForm.reset();
     }
-    
 }
 
 submitBtn.addEventListener('click', (e) => {

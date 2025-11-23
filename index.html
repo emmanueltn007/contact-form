@@ -6,26 +6,39 @@
   <link rel="stylesheet" href="styles.css">
   <title>Document</title>
 </head>
-<body class="flex items-center justify-center bg-[hsl(148,38%,91%)] h-screen w-full">
-  <form class="bg-white rounded-xl flex flex-col gap-4 p-8">
-    <h3 class="text-2xl font-semibold">
+<body class="flex justify-center bg-[hsl(148,38%,91%)] min-h-screen w-full pt-4 pb-4">
+  <form id="js-contact-form" class="bg-white rounded-xl flex flex-col gap-2 p-4 relative">
+    <div id="js-success-message" class="hidden bg-[hsl(169,82%,15%)] rounded-md 
+      absolute top-0 -translate-y-4 -translate-x-2 md:translate-x-5 p-4 flex-col gap-2 transition-all duration-150 ease-in-out">
+      <div class="text-white flex gap-2">
+        <img src="assets/images/icon-success-check.svg" alt="success-icon">
+        <h3 class="font-bold">
+          Message Sent!
+        </h3>
+      </div>
+      <p class="text-white text-sm">
+        Thanks for completing the form. We'll be in touch soon!
+      </p>
+    </div>
+
+    <h3 class="text-2xl md:text-xl font-semibold">
       Contact Us
     </h3>
     
     <div class="flex flex-col gap-8 md:gap-4 md:flex-row">
       <div class="flex flex-col gap-2">
-        <label for="first-name" class="text-[16px]">
+        <label for="first-name">
           First Name
           <span class="text-[hsl(169,82%,27%)]">*</span>
         </label>
         <input id="first-name" type="text"
           class="border border-solid border-gray-500 rounded-md p-2 active:outline-green-600 hover:outline  hover:outline-green-600
           focus:outline focus:outline-green-600">
-        <p id="js-first-name-alert" class="text-[hsl(0,66%,54%)] text-[13px]"></p>
+        <p id="js-first-name-alert" class="text-[hsl(0,66%,54%)] text-[13px] "></p>
       </div>
       
       <div class="flex flex-col gap-2">
-        <label for="last-name" class="text-[16px]">
+        <label for="last-name">
           Last Name
           <span class="text-[hsl(169,82%,27%)]">*</span>
         </label>
@@ -37,7 +50,7 @@
     </div>
     
     <div class="flex flex-col gap-2">
-      <label for="email-address" class="text-[16px]">
+      <label for="email-address">
         Email Address
         <span class="text-[hsl(169,82%,27%)]">*</span>
       </label>
@@ -57,15 +70,13 @@
         <div id="js-radio-container" class="flex flex-col gap-4 md:flex-row md:gap-4 p-2 rounded-md">
           <label for="" class="cursor-pointer border border-gray-500 border-solid p-2 rounded-md w-full active:outline-green-600 hover:outline  hover:outline-green-600
             focus:outline focus:outline-green-600">
-            <input type="radio" name="choice"
-              class="text-[16px]">
+            <input type="radio" name="choice">
             General Enquiry
           </label>
 
           <label class="cursor-pointer border border-gray-500 border-solid p-2 rounded-md w-full active:outline-green-600 hover:outline  hover:outline-green-600
             focus:outline focus:outline-green-600">
-            <input type="radio" name="choice"
-              class="text-[16px]">
+            <input type="radio" name="choice">
             Support Request
           </label>
         </div>
@@ -74,12 +85,12 @@
       
     </fieldset>
 
-    <label for="message" class="text-[16px]">
+    <label for="message">
       Message
       <span class="text-[hsl(169,82%,27%)]">*</span>
     </label>
     <textarea name="" id="message"
-      class="border border-solid border-gray-500 rounded-md p-2 h-32 resize-none cursor-pointer active:outline-green-600 hover:outline  hover:outline-green-600
+      class="border border-solid border-gray-500 rounded-md p-2 h-32 md:h-16 resize-none cursor-pointer active:outline-green-600 hover:outline  hover:outline-green-600
           focus:outline focus:outline-green-600"></textarea>
     <p id="js-message-alert" class="text-[hsl(0,66%,54%)] text-[13px]"></p>
 
