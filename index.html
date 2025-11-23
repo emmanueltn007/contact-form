@@ -6,7 +6,79 @@
   <link rel="stylesheet" href="styles.css">
   <title>Document</title>
 </head>
-<body>
-  <h1 class="text-yellow-400">Hello</h1>
+<body class="flex items-center justify-center bg-[hsl(148,38%,91%)] h-screen w-full">
+  <form class="bg-white rounded-xl flex flex-col gap-4 p-8">
+    <h3 class="text-2xl font-semibold">
+      Contact Us
+    </h3>
+    
+    <div class="flex flex-col gap-8 md:gap-4 md:flex-row">
+      <div class="flex flex-col gap-2">
+        <label for="first-name" class="text-[16px]">
+          First Name
+        </label>
+        <input id="first-name" type="text"
+          class="border border-solid border-gray-500 rounded-md p-2 active:outline-green-600 hover:outline  hover:outline-green-600
+          focus:outline focus:outline-green-600">
+      </div>
+      
+      <div class="flex flex-col gap-2">
+        <label for="last-name" class="text-[16px]">
+          Last Name
+        </label>
+        <input id="last-name" type="text"
+          class="border border-solid border-gray-500 rounded-md p-2 cursor-pointer active:outline-green-600 hover:outline  hover:outline-green-600
+            focus:outline focus:outline-green-600">
+      </div>
+    </div>
+    
+    <label for="email-address" class="text-[16px]">
+      Email Address
+    </label>
+    <input id="email-address" type="email"
+      class="border border-solid border-gray-500 rounded-md p-2 cursor-pointer active:outline-green-600 hover:outline  hover:outline-green-600
+          focus:outline focus:outline-green-600">
+
+    <fieldset>
+      <legend>
+        Query Type
+      </legend>
+
+      <div class="flex flex-col gap-2 md:flex-row md:gap-4">
+        <label for="" class="cursor-pointer">
+          <input type="radio" 
+            class="border border-solid border-gray-500 rounded-md text-[16px]">
+          General Enquiry
+        </label>
+
+        <label class="cursor-pointer">
+          <input type="radio"
+            class="border border-solid border-gray-500 rounded-md text-[16px]">
+          Support Request
+        </label>
+      </div>
+      
+    </fieldset>
+
+    <label for="message" class="text-[16px]">
+      Message
+    </label>
+    <textarea name="" id="message"
+      class="border border-solid border-gray-500 rounded-md p-2 h-32 resize-none cursor-pointer active:outline-green-600 hover:outline  hover:outline-green-600
+          focus:outline focus:outline-green-600"></textarea>
+
+    <div class="flex gap-4">
+      <input type="checkbox" class="cursor-pointer">
+      <p class="cursor-pointer">
+        I consent to being contacted by the team
+      </p>
+    </div>
+
+    <button type="submit"
+      class="bg-[hsl(169,82%,27%)] text-white font-semibold p-2.5 rounded-md hover:bg-[hsl(169,82%,10%)]
+        transition-all duration-150 ease-in-out cursor-pointer">
+      Submit
+    </button>
+  </form>
 </body>
 </html>
